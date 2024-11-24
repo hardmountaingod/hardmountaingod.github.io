@@ -11,7 +11,7 @@
         name="viewport"
         content="width=device-width, initial-scale=1, maximum-scale=1"
       />
-      <title>Tag: 思维 |  A Devout Believer</title>
+      <title>底层逻辑-part3 |  A Devout Believer</title>
   <meta name="generator" content="hexo-theme-ayer">
       
       <link rel="shortcut icon" href="/images/side_icon5.svg" />
@@ -53,131 +53,246 @@
       
     <main class="content on">
       <section class="outer">
-  
-  
-  <article class="articles">
+  <article
+  id="post-底层逻辑-part3"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
     
-    
-    <h1 class="page-type-title">#&nbsp思维</h1>
-    
-    
+    <header class="article-header">
+       
+<h1 class="article-title sea-center" style="border-left:0" itemprop="name">
+  底层逻辑-part3
+</h1>
+ 
+
+      
+    </header>
+     
+    <div class="article-meta">
+      <a href="/2024/10/03/%E5%BA%95%E5%B1%82%E9%80%BB%E8%BE%91-part3/" class="article-date">
+  <time datetime="2024-10-02T19:45:43.000Z" itemprop="datePublished">2024-10-03</time>
+</a> 
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/">读书笔记</a>
+  </div>
   
-  
-  
-  
-  
-  
-  <div class="archives-wrap">
-    <div class="archive-year-wrap">
-      <a href="/archives/2024" class="archive-year">2024</a>
+<div class="word_count">
+    <span class="post-time">
+        <span class="post-meta-item-icon">
+            <i class="ri-quill-pen-line"></i>
+            <span class="post-meta-item-text"> 字数统计:</span>
+            <span class="post-count">1.4k</span>
+        </span>
+    </span>
+
+    <span class="post-time">
+        &nbsp; | &nbsp;
+        <span class="post-meta-item-icon">
+            <i class="ri-book-open-line"></i>
+            <span class="post-meta-item-text"> 阅读时长≈</span>
+            <span class="post-count">4 分钟</span>
+        </span>
+    </span>
+</div>
+ 
     </div>
-    <div class="archives">
       
-      <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2024/10/03/%E5%BA%95%E5%B1%82%E9%80%BB%E8%BE%91-part4/" class="archive-article-date">
-  <time datetime="2024-10-02T20:56:54.000Z" itemprop="datePublished">10/03</time>
-</a>
+    <div class="tocbot"></div>
+
+
+
+
+  
+    <div class="article-entry" itemprop="articleBody">
        
-<h2 itemprop="name">
-  <a class="archive-article-title" href="/2024/10/03/%E5%BA%95%E5%B1%82%E9%80%BB%E8%BE%91-part4/"
-    >底层逻辑-part4</a> 
-</h2>
+  <style>
+    @font-face{
+        font-family: "方正楷体";
+        src: url(/../fonts/方正楷体.TTF);
+    }
+    p{
+        font-family:"方正楷体";
+        font-size:20px;
+    }
+    h2{
+        font-family:"方正楷体";
+        font-size:30px;
+    }
+    h3{
+        font-family:"方正楷体";
+        font-size:25px;
+    }
+</style>
+<h2 id="复杂问题的成分"><a href="#复杂问题的成分" class="headerlink" title="复杂问题的成分"></a>复杂问题的成分</h2><p>&emsp;&emsp;<strong>系统由各个要素和它们之间的连接关系构成</strong>。对系统添加一个刺激，系统中的要素会呈现相应的行为，并被人们所观测到。如果想改变系统的行为，但无法理解要素和其连接关系而随意给出刺激，显然难以使要素的行为符合预期。这里系统可以类比电力系统，电力系统中的要素就是母线或电力负荷节点，连接关系就是节点之间的线路，给系统施加一个刺激，比如某个位置发生短路，那么我们可以观察到的行为是电力系统中各个节点的电压幅值发生了变化。</p>
+<span id="more"></span>
+
+<p>&emsp;&emsp;<strong>要素行为的猛烈程度受初始值和刺激同时影响</strong>。比如电力系统两个节点A和B之间的线路发生了短路接地故障，如果短路距离A更近，那么短路之后，A节点的电压幅值相较于B节点而言会降低的更多，这就是A和B节点（不同要素）受到短路（同一刺激）表现出的电压不一致（行为猛烈程度不一致）。同样是一个电力系统，如果分别发生两次短路接地故障，一次故障距离A节点很远，一次距离A节点很近，那么距离A节点（同一要素）近的的故障（不同刺激）会导致A节点电压幅值跌落的更多（行为猛烈程度不一致）。还是一个电力系统，如果它本来是一个小型的不稳定分布式系统（初始值是危险的临界值），系统中发生了轻微的短路故障，整个系统可能就面临离网解体的风险，这是因为系统的容量不足。</p>
+<p>&emsp;&emsp;上面的例子可能比较晦涩，通俗的例子如下：一个人可能以为仅仅因为一件小事，女朋友就和他分手，但很有可能是因为之前已经有很多次惹得女朋友生气，而没有设法使得女朋友舒缓生气的情绪，从而使得这件小事成为压死骆驼的最后一根稻草。</p>
+<p>&emsp;&emsp;在分析多个变量发挥作用时的复杂情况时，尽量<strong>别陷入只有一个变量起决定性作用的思维陷阱</strong>。</p>
+<h2 id="要素之间的关系"><a href="#要素之间的关系" class="headerlink" title="要素之间的关系"></a>要素之间的关系</h2><p>&emsp;&emsp;第一种关系是因果关系。例如：工作时间越长，疲劳程度就会越高，工作时间是因，疲劳程度是国，因强则果强。又例如：疲劳程度越高，工作效率就会越低，疲劳程度是因，工作效率是果，因强则果弱。</p>
+<p>&emsp;&emsp;第二种关系是增强回路。“因”增强“果”，“果”又增强“因”的，叫正向增强回路；“因”减弱“果”，“果”又减弱“因”的，叫负向增强回路</p>
+<p>&emsp;&emsp;第三种关系是调节回路。“因”增强“果”，“果”减弱“因”的回路，就是调节回路。</p>
+<h2 id="提取要素"><a href="#提取要素" class="headerlink" title="提取要素"></a>提取要素</h2><p>&emsp;&emsp;看看下面的一则故事：从前有座山，山里有座庙，庙里有几个和尚，他们每天都是同吃一 桶粥。但粥总是分得不公平，负责分粥的人碗里的粥总是又稠又多。 于是，他们选举了一名德高望重的和尚来负责分粥，但结果并没有改变，甚至还出现了腐败——有人贿赂负责分粥的和尚。后来，他们决定干脆轮流分粥。这种方法导致的结果是，每个人在轮到分粥的那 天，都会给自己分又稠又多的粥，而其他日子里，都是清汤寡水。有人说：“我们成立分粥委员会和监督委员会吧，把分粥者的权利锁在牢笼里。”但是执行起来才发现，这样还是不行。因为委员会里的每个人意见不一致，经常吵来吵去，粥都凉了还分不了粥。</p>
+<p>  <strong>我们尝试从观察到的一次流程中去发掘要素。</strong>一次分粥的流程大致包括：分粥人给不同的碗盛满粥，不同的人取粥。要素是：分粥人、盛粥的碗和取粥的人。取粥人必然想取盛粥最多的碗（关系1），而分粥人决定了每个碗盛粥的多少（关系2），且分粥人对盛粥的碗拥有绝对选择权力（关系3），那必然导致分粥人给自己分的多，给别人分的少。<strong>解决问题就是更改要素之间的关系。</strong>现在要使得分配公平，只需要切断关系3，因为分粥人无法获取利己因素，为了自己不吃亏只有分配公平。破除该关系的方式可以是使分粥人丧失对粥的优先选择权，即分粥人最后取粥。</p>
+<h2 id="发现问题"><a href="#发现问题" class="headerlink" title="发现问题"></a>发现问题</h2><p>&emsp;&emsp;为了提高我们解决问题的能力，我们应该对事物保持好奇心，主动去发现一些问题。<strong>看起来这样-为什么这样-以前怎样-还有什么这样</strong>。</p>
  
-
-    </header>
-    
-    
+      <!-- reward -->
       
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E6%80%9D%E7%BB%B4/" rel="tag">思维</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E9%80%BB%E8%BE%91/" rel="tag">逻辑</a></li></ul>
-
-    
-  </div>
-</article>
-      
-  
-  
-      <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2024/10/03/%E5%BA%95%E5%B1%82%E9%80%BB%E8%BE%91-part3/" class="archive-article-date">
-  <time datetime="2024-10-02T19:45:43.000Z" itemprop="datePublished">10/03</time>
-</a>
-       
-<h2 itemprop="name">
-  <a class="archive-article-title" href="/2024/10/03/%E5%BA%95%E5%B1%82%E9%80%BB%E8%BE%91-part3/"
-    >底层逻辑-part3</a> 
-</h2>
- 
-
-    </header>
-    
-    
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E6%80%9D%E7%BB%B4/" rel="tag">思维</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E9%80%BB%E8%BE%91/" rel="tag">逻辑</a></li></ul>
-
-    
-  </div>
-</article>
-      
-  
-  
-      <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2024/10/03/%E5%BA%95%E5%B1%82%E9%80%BB%E8%BE%91-part2/" class="archive-article-date">
-  <time datetime="2024-10-02T18:34:56.000Z" itemprop="datePublished">10/03</time>
-</a>
-       
-<h2 itemprop="name">
-  <a class="archive-article-title" href="/2024/10/03/%E5%BA%95%E5%B1%82%E9%80%BB%E8%BE%91-part2/"
-    >底层逻辑-part2</a> 
-</h2>
- 
-
-    </header>
-    
-    
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E6%80%9D%E7%BB%B4/" rel="tag">思维</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E9%80%BB%E8%BE%91/" rel="tag">逻辑</a></li></ul>
-
-    
-  </div>
-</article>
-      
-  
-  
-      <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2024/10/03/%E5%BA%95%E5%B1%82%E9%80%BB%E8%BE%91-part1/" class="archive-article-date">
-  <time datetime="2024-10-02T17:23:45.000Z" itemprop="datePublished">10/03</time>
-</a>
-       
-<h2 itemprop="name">
-  <a class="archive-article-title" href="/2024/10/03/%E5%BA%95%E5%B1%82%E9%80%BB%E8%BE%91-part1/"
-    >底层逻辑-part1</a> 
-</h2>
- 
-
-    </header>
-    
-    
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E6%80%9D%E7%BB%B4/" rel="tag">思维</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E9%80%BB%E8%BE%91/" rel="tag">逻辑</a></li></ul>
-
-    
-  </div>
-</article>
-      
+      <div id="reword-out">
+        <div id="reward-btn">
+          打赏
+        </div>
+      </div>
       
     </div>
-  </div>
-  
-  
+    
 
+    <!-- copyright -->
+    
+    <div class="declare">
+      <ul class="post-copyright">
+        <li>
+          <i class="ri-copyright-line"></i>
+          <strong>版权声明： </strong>
+          
+          本博客所有文章除特别声明外，著作权归作者所有。转载请注明出处！
+          
+        </li>
+      </ul>
+    </div>
+    
+    <footer class="article-footer">
+       
+<div class="share-btn">
+      <span class="share-sns share-outer">
+        <i class="ri-share-forward-line"></i>
+        分享
+      </span>
+      <div class="share-wrap">
+        <i class="arrow"></i>
+        <div class="share-icons">
+          
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="ri-weibo-fill"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="ri-wechat-fill"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="ri-qq-fill"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="ri-douban-line"></i>
+          </a>
+          <!-- <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a> -->
+          
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="ri-facebook-circle-fill"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="ri-twitter-fill"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="ri-google-fill"></i>
+          </a>
+        </div>
+      </div>
+</div>
+
+<div class="wx-share-modal">
+    <a class="modal-close" href="javascript:;"><i class="ri-close-circle-line"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://hardmountaingod.github.io/2024/10/03/%E5%BA%95%E5%B1%82%E9%80%BB%E8%BE%91-part3/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div id="share-mask"></div>  
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E6%80%9D%E7%BB%B4/" rel="tag">思维</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E9%80%BB%E8%BE%91/" rel="tag">逻辑</a></li></ul>
+
+    </footer>
+  </div>
+
+   
+  <nav class="article-nav">
+    
+      <a href="/2024/10/03/%E5%BA%95%E5%B1%82%E9%80%BB%E8%BE%91-part4/" class="article-nav-link">
+        <strong class="article-nav-caption">上一篇</strong>
+        <div class="article-nav-title">
+          
+            底层逻辑-part4
+          
+        </div>
+      </a>
+    
+    
+      <a href="/2024/10/03/%E5%BA%95%E5%B1%82%E9%80%BB%E8%BE%91-part2/" class="article-nav-link">
+        <strong class="article-nav-caption">下一篇</strong>
+        <div class="article-nav-title">底层逻辑-part2</div>
+      </a>
+    
+  </nav>
+
+   
+<!-- valine评论 -->
+<div id="vcomments-box">
+  <div id="vcomments"></div>
+</div>
+<script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+<script src="https://cdn.staticfile.org/valine/1.4.16/Valine.min.js"></script>
+<script>
+  new Valine({
+    el: "#vcomments",
+    app_id: "pmzGzNK6yypSybc5wIwCQxGp-gzGzoHsz",
+    app_key: "1q2zwsy86K1SmXhebPxb60tr",
+    path: window.location.pathname,
+    avatar: "",
+    placeholder: "给我的文章加点评论吧~",
+    recordIP: true,
+  });
+  const infoEle = document.querySelector("#vcomments .info");
+  if (infoEle && infoEle.childNodes && infoEle.childNodes.length > 0) {
+    infoEle.childNodes.forEach(function (item) {
+      item.parentNode.removeChild(item);
+    });
+  }
+</script>
+<style>
+  #vcomments-box {
+    padding: 5px 30px;
+  }
+
+  @media screen and (max-width: 800px) {
+    #vcomments-box {
+      padding: 5px 0px;
+    }
+  }
+
+  #vcomments-box #vcomments {
+    background-color: #fff;
+  }
+
+  .v .vlist .vcard .vh {
+    padding-right: 20px;
+  }
+
+  .v .vlist .vcard {
+    padding-left: 10px;
+  }
+</style>
+
+ 
+   
   
+    
+</article>
+
 </section>
       <footer class="footer">
   <div class="outer">
@@ -310,6 +425,22 @@
 <script src="/js/lazyload.min.js"></script>
 
 <!-- Tocbot -->
+ 
+<script src="/js/tocbot.min.js"></script>
+
+<script>
+  tocbot.init({
+    tocSelector: ".tocbot",
+    contentSelector: ".article-entry",
+    headingSelector: "h1, h2, h3, h4, h5, h6",
+    hasInnerContainers: true,
+    scrollSmooth: true,
+    scrollContainer: "main",
+    positionFixedSelector: ".tocbot",
+    positionFixedClass: "is-position-fixed",
+    fixedSidebarOffset: "auto",
+  });
+</script>
 
 <script src="https://cdn.staticfile.org/jquery-modal/0.9.2/jquery.modal.min.js"></script>
 <link

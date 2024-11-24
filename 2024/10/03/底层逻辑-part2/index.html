@@ -11,7 +11,7 @@
         name="viewport"
         content="width=device-width, initial-scale=1, maximum-scale=1"
       />
-      <title>steal your voice |  A Devout Believer</title>
+      <title>底层逻辑-part2 |  A Devout Believer</title>
   <meta name="generator" content="hexo-theme-ayer">
       
       <link rel="shortcut icon" href="/images/side_icon5.svg" />
@@ -54,7 +54,7 @@
     <main class="content on">
       <section class="outer">
   <article
-  id="post-steal_your_voice"
+  id="post-底层逻辑-part2"
   class="article article-type-post"
   itemscope
   itemprop="blogPost"
@@ -65,7 +65,7 @@
     <header class="article-header">
        
 <h1 class="article-title sea-center" style="border-left:0" itemprop="name">
-  steal your voice
+  底层逻辑-part2
 </h1>
  
 
@@ -73,11 +73,11 @@
     </header>
      
     <div class="article-meta">
-      <a href="/2024/03/31/steal_your_voice/" class="article-date">
-  <time datetime="2024-03-31T14:23:06.000Z" itemprop="datePublished">2024-03-31</time>
+      <a href="/2024/10/03/%E5%BA%95%E5%B1%82%E9%80%BB%E8%BE%91-part2/" class="article-date">
+  <time datetime="2024-10-02T18:34:56.000Z" itemprop="datePublished">2024-10-03</time>
 </a> 
   <div class="article-category">
-    <a class="article-category-link" href="/categories/%E6%8A%80%E6%9C%AF%E5%AD%A6%E4%B9%A0/">技术学习</a>
+    <a class="article-category-link" href="/categories/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/">读书笔记</a>
   </div>
   
 <div class="word_count">
@@ -85,7 +85,7 @@
         <span class="post-meta-item-icon">
             <i class="ri-quill-pen-line"></i>
             <span class="post-meta-item-text"> 字数统计:</span>
-            <span class="post-count">1.7k</span>
+            <span class="post-count">3.5k</span>
         </span>
     </span>
 
@@ -94,7 +94,7 @@
         <span class="post-meta-item-icon">
             <i class="ri-book-open-line"></i>
             <span class="post-meta-item-text"> 阅读时长≈</span>
-            <span class="post-count">6 分钟</span>
+            <span class="post-count">12 分钟</span>
         </span>
     </span>
 </div>
@@ -127,55 +127,35 @@
         font-size:25px;
     }
 </style>
-<p>&emsp;&emsp;GPT-SoVITS是一款低成本AI音色克隆软件，目前只有TTS（文字转语音）功能，将来会更新变声功能。如果你不关注代码的内部逻辑，仅仅出于使用的目的，那么这款软件比较容易上手，你只需要如下一些步骤，就可以轻松克隆一段1分钟左右的音频中的人声。</p>
+<h2 id="什么是真正的事实"><a href="#什么是真正的事实" class="headerlink" title="什么是真正的事实"></a>什么是真正的事实</h2><p>&emsp;&emsp;在日常生活中，我们经常根据暗示、预感、偏见和错误信息等来揣测事实。然而对于生活中的许多情况（假使不是大多数情况），最合理的解释可能是你想象不到的。通常来说，我们无法区分比我们聪明得多的人和比我们笨得多的人之间的区别。这两组人都做出了我们无法理解的选择——这一点很重要，我们一定要记住。<strong>如果你认为对方的想法很糟糕，那么唯一能够确定的是你们两人之间至少有一人是愚蠢的。</strong>我们不可能真正知道这个人到底是谁，除非情况极为特殊，可以进行客观的比对。相对应的，在这个世界上，人们也会出于完全不同的原因喜欢同一件事。因此当我们企图分析他人的行为时，一定要充分的发挥自己的想象力。</p>
 <span id="more"></span>
 
-<h2 id="电脑配置要求"><a href="#电脑配置要求" class="headerlink" title="电脑配置要求"></a>电脑配置要求</h2><p>&emsp;&emsp;支持CUDA 的英伟达显卡，每张<strong>拥有至少 6G 以上显存</strong>，也就是最低NVIDIA GeForce RTX 3060 Laptop GPU。</p>
-<h2 id="安装CUDA和CUDNN"><a href="#安装CUDA和CUDNN" class="headerlink" title="安装CUDA和CUDNN"></a>安装CUDA和CUDNN</h2><p>&emsp;&emsp;CUDA是英伟达推出的并行计算平台，它提供了相关API让开发者可以使用GPU完成通用计算加速。CUDNN是由英伟达开发的一个深度学习GPU加速库，来加速深度学习框架例如TensorFlow、PyTorch等在NVIDIA GPU上的运算。不同型号的显卡有不同的CUDA、CUDAA版本与之对应，具体的安装方法可以参考如下链接：<a target="_blank" rel="noopener" href="https://cloud.tencent.com/developer/article/2089949%E3%80%82">https://cloud.tencent.com/developer/article/2089949。</a></p>
-<h2 id="安装python软件和pytorch库"><a href="#安装python软件和pytorch库" class="headerlink" title="安装python软件和pytorch库"></a>安装python软件和pytorch库</h2><p>&emsp;&emsp;目前推荐的是3.9和3.10版本。你可以搜索“软件安装管家”微信公众号，后台回复python关键词获取多种python版本的下载链接和安装步骤说明。安装好python软件之后，接下来是安装pytorch库，需要注意的是，pytorch库有cpu和gpu两个版本，你应该安装的是gpu版本。你可以从如下链接获取到pytorch的安装命令：<a target="_blank" rel="noopener" href="https://pytorch.org/get-started/locally/#no-cuda-1%E3%80%82">https://pytorch.org/get-started/locally/#no-cuda-1。</a></p>
-<p><img src="/2024/03/31/steal_your_voice/%E5%AE%89%E8%A3%85pytorch.png" alt="安装pytorch"></p>
-<p>&emsp;&emsp;按照图中顺序，依次选择pytorch的版本，电脑操作系统，安装包类型，安装语言，并行计算平台，然后你就可以从截图中的最后一行位置得到安装命令。如果你的计算平台版本是其他的，比图CUDA11.7，那么你可以i将这行指令的最后的118改成117。</p>
-<h2 id="关闭GPU加速"><a href="#关闭GPU加速" class="headerlink" title="关闭GPU加速"></a>关闭GPU加速</h2><p>&emsp;&emsp;win11关闭GPU加速，貌似有占用不满的bug。</p>
-<h2 id="分配虚拟内存"><a href="#分配虚拟内存" class="headerlink" title="分配虚拟内存"></a>分配虚拟内存</h2><p>&emsp;&emsp;将GPT-SoVITS整合包下载存放到与python安装路径所在的同一磁盘，并在该磁盘中分配至少30G的虚拟内存，供GPT-SoVITS整合包在推理过程中使用。</p>
-<h2 id="下载GPT-SoVITS整合包"><a href="#下载GPT-SoVITS整合包" class="headerlink" title="下载GPT-SoVITS整合包"></a>下载GPT-SoVITS整合包</h2><p>&emsp;&emsp;整合包的下载地址是：<a target="_blank" rel="noopener" href="https://pan.baidu.com/s/1OE5qL0KreO-ASHwm6Zl9gA?pwd=mqpi%E3%80%82">https://pan.baidu.com/s/1OE5qL0KreO-ASHwm6Zl9gA?pwd=mqpi。</a></p>
-<p>&emsp;&emsp;下载其中最新的一个压缩包即可。下载到本地之后，解压。官方文档推荐使用7-zip这款解压工具，据说其他解压工具在解压过程中会丢失文件。</p>
-<p><img src="/2024/03/31/steal_your_voice/%E6%95%B4%E5%90%88%E5%8C%85%E4%B8%8B%E8%BD%BD.png"></p>
-<h2 id="运行软件"><a href="#运行软件" class="headerlink" title="运行软件"></a>运行软件</h2><p>&emsp;&emsp;点开解压后文件夹中的名字叫“go-webui.bat”的文件，此时会弹出黑色的命令运行窗口，需要注意，软件运行过程中，不能关闭此窗口。</p>
-<p><img src="/2024/03/31/steal_your_voice/go-webui.bat.png" alt="安装pytorch"></p>
-<p>&emsp;&emsp;如果顺利的话，随后过几秒，会自动打开浏览器，显示软件的操作界面。</p>
-<p><img src="/2024/03/31/steal_your_voice/%E8%BD%AF%E4%BB%B6%E7%95%8C%E9%9D%A2.png" alt="安装pytorch"></p>
-<p>​	如果不顺利的话，你的命令运行窗口可能会提示一些python库未安装，例如深度学习所需要的pytoch等库。解决的办法也很简单，你同时按住键盘上的window图标键和R键，在弹出来的提示框中输入cmd并回车。</p>
-<p><img src="/2024/03/31/steal_your_voice/cmd.png" alt="安装pytorch"></p>
-<p>&emsp;&emsp;然后使用pip install xxxx的方式，安装缺失的xxx库。每安装好一个库之后，就重新双击运行“go-webui.bat”这个文件，直到其不报错，顺利打开软件操作界面。</p>
-<p><img src="/2024/03/31/steal_your_voice/%E5%AE%89%E8%A3%85python%E5%BA%93.png" alt="安装pytorch"></p>
-<h2 id="使用软件"><a href="#使用软件" class="headerlink" title="使用软件"></a>使用软件</h2><h3 id="人声伴奏分离"><a href="#人声伴奏分离" class="headerlink" title="人声伴奏分离"></a>人声伴奏分离</h3><p>&emsp;&emsp;你要克隆音色，那么首先必然需要准备好音频。为了方便管理，你可以专门建立一个文件夹来存放你的原始音频素材。如果你的音频质量本身较高，可以直接进行下一步。</p>
-<p><img src="/2024/03/31/steal_your_voice/data.png" alt="安装pytorch"></p>
-<p>&emsp;&emsp;如果你的音频有一些杂音，你可以使用软件中的UVR5工具首先进行一次去噪。勾选UVR5工具之后，等待几秒，会弹出新的操作界面用于操作这些原始音频材料。</p>
-<p><img src="/2024/03/31/steal_your_voice/%E5%BC%80%E5%90%AFUVR.png" alt="安装pytorch"></p>
-<p>&emsp;&emsp;依次填写图中的各项路径，填好后，选择转换，等待几秒之后，你就得到了去噪之后的人声文件。如果效果不理想的话，可以删除文件后多生成几次，确保音频质量。</p>
-<p><img src="/2024/03/31/steal_your_voice/%E4%BD%BF%E7%94%A8UVR.png" alt="安装pytorch"></p>
-<h3 id="语音切分"><a href="#语音切分" class="headerlink" title="语音切分"></a>语音切分</h3><p>&emsp;&emsp;依次填写图中的各项路径，其他参数保持默认，填好后，选择开始语音切割。等待几秒，切割完成。切割完成后的每段音频一般不会超过20s，如果你切割出来的音频较长，可能需要适当调整一下这一步中的相关参数。</p>
-<p><img src="/2024/03/31/steal_your_voice/%E8%AF%AD%E9%9F%B3%E5%88%87%E5%89%B2.png" alt="安装pytorch"></p>
-<h3 id="打标"><a href="#打标" class="headerlink" title="打标"></a>打标</h3><p>&emsp;&emsp;图中的路径填写为刚才存放分割音频的文件夹路径，此处输出路径保持默认。选择开启离线批量ASR，等待几秒钟，转换完成。</p>
-<p><img src="/2024/03/31/steal_your_voice/%E6%89%93%E6%A0%87.png" alt="安装pytorch"></p>
-<p>&emsp;&emsp;将转换完成的文件路径名，填写在如图中指定位置，并勾选开启打标。</p>
-<p><img src="/2024/03/31/steal_your_voice/%E6%89%93%E6%A0%87%E6%A0%A1%E5%AF%B9.png" alt="安装pytorch"></p>
-<p>&emsp;&emsp;等待几秒，会弹出新的网页用于校对打标结果。新页面中，每一段切割的音频左边是它的文字结果，你可以一边听音频，一边修改左边的文字，保证文字和停顿的标点符号正确性。</p>
-<p>&emsp;&emsp;当这一页的打标结果核对完成之后，点击submit提交结果，并点击next开始核实下一页。</p>
-<p><img src="/2024/03/31/steal_your_voice/%E6%89%93%E6%A0%87%E7%BF%BB%E9%A1%B5.png" alt="安装pytorch"></p>
-<p>&emsp;&emsp;对于不想要的音频，可以首先勾选音频旁边的yes选中该音频，然后选择delete，最后保存文件。</p>
-<p><img src="/2024/03/31/steal_your_voice/%E6%89%93%E6%A0%87%E5%88%A0%E9%99%A4.png" alt="安装pytorch"></p>
-<p>&emsp;&emsp;等校对完成之后，关闭该页面，返回前置数据集获取页面，取消勾选开启打标。</p>
-<h3 id="开始训练"><a href="#开始训练" class="headerlink" title="开始训练"></a>开始训练</h3><p>&emsp;&emsp;从前置数据集获取工具切换到GPT-SoVITS-TTS工具。</p>
-<p><img src="/2024/03/31/steal_your_voice/%E5%BC%80%E5%A7%8B%E8%AE%AD%E7%BB%83.png" alt="安装pytorch"></p>
-<p>&emsp;&emsp;依次填写图中的训练名字（随意填写，但必须为英文）、打标文件的文件路径名、切割音频的文件夹名、并点击一键三连开始训练。</p>
-<p>&emsp;&emsp;等一键三连结束，选择微调训练。</p>
-<p><img src="/2024/03/31/steal_your_voice/%E5%BE%AE%E8%B0%83%E8%AE%AD%E7%BB%83.png" alt="安装pytorch"></p>
-<p>&emsp;&emsp;依次点击开启SoVITS训练和GPT训练。如果显卡是3060这种入门的级别，那么SoVITS训练的batch size选择较小，如1。GPT训练的batch size通常也较小，如4。</p>
-<p><img src="/2024/03/31/steal_your_voice/%E5%BC%80%E5%90%AF%E5%BE%AE%E8%B0%83%E8%AE%AD%E7%BB%83.png" alt="安装pytorch"></p>
-<p>&emsp;&emsp;训练完之后，切换到1c-推理。</p>
-<h3 id="开始推理"><a href="#开始推理" class="headerlink" title="开始推理"></a>开始推理</h3><p>&emsp;&emsp;训练完之后，切换到1c-推理。选择刷新模型路径，然后依次下拉选择GPT模型和SoVITS模型，最后勾选开启TTS推理，等待几秒钟会出现新的界面，用于推理。</p>
-<p><img src="/2024/03/31/steal_your_voice/%E5%BC%80%E5%A7%8B%E6%8E%A8%E7%90%86.png" alt="安装pytorch"></p>
+<h2 id="现象≠原因"><a href="#现象≠原因" class="headerlink" title="现象≠原因"></a>现象≠原因</h2><p>&emsp;&emsp;首先请看下面一段报道：有一项针对百岁老人的研究显示，如果一个女性是自然怀孕，而且是在40岁之后才生孩子，那么她比普通的女性活到百岁的可能性会高出4倍。</p>
+<p>&emsp;&emsp;乍一看这段报道似乎没有什么问题，不加以思考的话，我们可能就接受它这个观点了。但是别的不说，40多岁还能怀孕生子，那她的身体，应该本来就很好才对吧？所以这个例子告诉我们：观测只能明确某些现象确实前后发生，但只有<strong>实验</strong>才能在控制和排除所有无关因素之后<strong>提取出真实的因果性</strong>是什么。</p>
+<p>&emsp;&emsp;触类旁通，现在很多学术文章上提到的一些模式匹配，以及一些高大上的预测模型与其说是科学，不如说是一种劝说手段，因为它们尚缺乏实验去提取真实的因果性。</p>
+<h2 id="事实、观点、立场"><a href="#事实、观点、立场" class="headerlink" title="事实、观点、立场"></a>事实、观点、立场</h2><p>&emsp;&emsp;“今天30摄氏度”，这是一个事实。事实，是<strong>独立于人的判断的客观存在</strong>。</p>
+<p>&emsp;&emsp;“今天很热”，这是私人的观点，也就<strong>是一个人对事实的看法</strong>。一个人的知识结构、他掌握的信息，以及他的思维模式决定了他的观点。</p>
+<p>&emsp;&emsp;有人问你热不热，你觉得挺热的。但如果你在物业公司工作，你一 旦承认热，别人就会要求你给大厦开空调。于是，你一边冒着汗，一边说：“我不热，我就是不热”。这就是立场，<strong>立场是被位置和利益影响的观点</strong>。立场不争对错，只争输赢。</p>
+<p>&emsp;&emsp;所以对任何专家都要持怀疑态度，因为他们为了自己的经济利益可能会误导你，而对他们来说这么做几乎没有风险。毕竟如果同时满足下列三个条件，那么恶劣行为发生的可能性几乎就是100%：这种恶劣行为有利可图；恶行被发现的概率很低；参与者众多。</p>
+<h2 id="谁对谁错"><a href="#谁对谁错" class="headerlink" title="谁对谁错"></a>谁对谁错</h2><p>&emsp;&emsp;坏人A诱骗好人B进入C的没有锁门的工地，B失足摔死 了。请问，这是谁的错？</p>
+<p>&emsp;&emsp;D答：谁<strong>证据确凿</strong>谁的错，所以是A的错。</p>
+<p>&emsp;&emsp;E答：整个<strong>社会</strong>为避免B被A诱骗进入C的工地要<strong>付出的成本</strong>，比C把工地的门锁上的成本高得多，虽然惩罚C会让其觉得冤，但是以后所有工地的拥有者就都会把门锁上了，于是这样的事情会大量减少；所以C的错。</p>
+<p>&emsp;&emsp;F答：不管是A的错还是C的错，B都死了；不管让谁承担责任，B都无法起死回生。因此从<strong>个体利益最大化</strong>的角度看，B只能怪自己，所以B的错。</p>
+<p>&emsp;&emsp;打败一条狗并不光荣，但被狗咬到一口却很倒霉。所以，很多时候即使客观来看不是自己的错，不要过多纠缠，怪自己就好了。</p>
+<h2 id="感受不互通，要什么换位思考"><a href="#感受不互通，要什么换位思考" class="headerlink" title="感受不互通，要什么换位思考"></a>感受不互通，要什么换位思考</h2><p>&emsp;&emsp;有一种晚叫作“你妈觉得你晚” ，有一 种不晚叫作“你自己觉得不晚” ，每个人的主观感受永远都是没办法统一的。那么当有人用换位思考，企图让我们感同身受并作出让步的时候，我们如何应对呢。感受虽然不互通，但数据是客观中立的。与其把时间浪费在盲人摸象、各执一词的争论上，还不如从<strong>客观数据的角度，对事物的全体做一个定量分析</strong>。毕竟诸如大城市女性的平均婚龄、近十年结婚年龄的变化趋势、人均寿命和最晚生育年龄的提高，这些都是有据可查的客观事实。</p>
+<h2 id="注射式洗脑"><a href="#注射式洗脑" class="headerlink" title="注射式洗脑"></a>注射式洗脑</h2><p>&emsp;&emsp;来看看下面这些话：为什么电子产品越来越便宜，衣服鞋子却越来越贵？为什么书上说的激励手段都没用？为什么爱因斯坦晚年改信上帝了？</p>
+<p>&emsp;&emsp;当你看到这些话的时候，为什么三个字后面的观点，你信了几个。你是不是有一种冲动，把自己的注意力集中到为这些观点找原因上去了，这就是为什么三个字的强大之处！当我们开始为它找原因的时候，这个观点就已经悄悄地被“注射”进我们的大脑了。<strong>因此把谣言放在“为什么”后面，是传播谣言的最佳方法。</strong>当我们听到为什么三个字的时候，一定要尤其警惕，别人是不是在给我们洗脑。同样，要警惕我们给自己说的为什么。</p>
+<h2 id="是or不是"><a href="#是or不是" class="headerlink" title="是or不是"></a>是or不是</h2><p>&emsp;&emsp;“你还在虐待你的配偶吗？”如果你回答“是”，那你就是一个虐待配偶的人；如果你回答“不”，那你就是承认自己曾经虐待过配偶。类似的又比如：“对所有问题来说，尤其是政治方面的问题，为了能达到目的就可以不择手段吗？”</p>
+<p>&emsp;&emsp;当你被问道这些刁钻的问题时，最好不要回答。如果一定要回答，在回答之前换一种限定使用条件的方法反问一下对方：“<strong>我想你的意思是，收益大于成本吗？</strong>“等对方改变问题的问法之后，再进行解释：”我会考虑所有相关的成本和所有的收益，包括道德和伦理方面的考虑等“。最后反问：”你会怎么做“。当你被要求站队谁对谁错的时候，也可以用一种限定条件的方式去当墙头草。</p>
+<h2 id="知识and技能"><a href="#知识and技能" class="headerlink" title="知识and技能"></a>知识and技能</h2><p>&emsp;&emsp;知识就是已经被发现和证明的规律。它是确定的，不需要我们通过自身的成功、挫败去验证，然后恍然大悟。比如，供给大于需求，价格就会下降；把商品放对了心理账户，会增加消费者购买的意愿……这些都是确定的。学习知识的方法简单直接：通过“记忆”，把知识分门别类地存放在我们的“存储脑”的某个“抽屉”里。但知识是有适用边界的，甚至是有保质期的。</p>
+<p>&emsp;&emsp;技能就是那些我们以为自己知道，但如果没做过就永远不会真的知道的事情。骑自行车是技能，我们永远“学”不会骑车，只能 靠练“习”，甚至练到浑身淤青之后，才能掌握这门技能。演讲是技能，即使读了100本如何演讲的书，但如果我们从不上台，还是 一辈子都“学”不会演讲。要掌握一门技能，需要通过不断重复训练稍微困难的任务，从而获得最高效的进步。</p>
+<h2 id="学历代表了什么"><a href="#学历代表了什么" class="headerlink" title="学历代表了什么"></a>学历代表了什么</h2><p>&emsp;&emsp;高中的最根本目的并不是传授知识和培养人，而是把人分类。 命题者设计那些刁钻古怪的高考题，并不是因为这些题目有实际意 义，而是因为它们够难！当然，解题也可以锻炼人的思维能力和意志品质，但这不是最重要的。最重要的是只有足够难的题目才能更好地把人和人区分开来。是智商的差距也好，是意志品质的差距也好，反正人和人必须区分开。</p>
+<p>&emsp;&emsp;哪怕是“谁来了都能干”的工作，企业也不希望“让谁都来干”，而希望员工都有一定的忠诚度和凝聚力，并愿意为此支付一个更高的工资。这就需要用一些门槛把一部分人挡在外面。这些门槛应该给人公正的感觉，好像得到这个工作的人真的是靠能力得到的一样。实际上往往<strong>有能力做这个工作的人很多，门槛的作用就是明明他有能力，我们还是因为名额有限而找个借口淘汰他，而学历就是最好的门槛</strong>。</p>
+<h2 id="投票"><a href="#投票" class="headerlink" title="投票"></a>投票</h2><p>&emsp;&emsp;<strong>当不能同时对所有候选人投票时，待投票的候选组合次序，会影响投票结果</strong>。一方面，为了避免选票淹没在众人的选票里，我们可以别出心裁，即选择一个极端的立场，与众人划清界限。另一方面，为了避免自己的选票或竞选资助款项浪费在毫无希望的候选人身上，我们可能会投给票数暂时领先的候选人。因此，当每个人票数有限时，投票的结果，不一定能反映投票人的真实意愿。如果对每一个候选人都可以选择投赞成或反对票，那么把票投给一个没有什么希望胜出的候选人毫无害处，这种投票方式也更能反映投票人的真实意愿。</p>
+<h2 id="个案逐项决策"><a href="#个案逐项决策" class="headerlink" title="个案逐项决策"></a>个案逐项决策</h2><p>&emsp;&emsp;<strong>就个案逐项进行决策可能导致全部结果都与我们的意愿南辕北辙</strong>。实际上，一项决定即便获得多数人投票赞成，仍然有可能导致一个在每个人看来都比现状更糟的结果。<strong>这种陷阱可通过重新安排个案轻重缓急次序实现</strong>。不重要的支出项目首先投票，首先获得通过。这么一个一个项目讨论下来，钱越来越少，气氛越来越紧张，甚至到了剑拔弩张的地步，但是，这时余下的支出项目实在太重要了，以至于谁也不能投票否决。</p>
+<h2 id="苦难的价值"><a href="#苦难的价值" class="headerlink" title="苦难的价值"></a>苦难的价值</h2><p>&emsp;&emsp;“苦练功夫”，“苦” 只是“练习”的副产品，真正让人提高技艺的是练习，而不是伴随着练习的那个苦感，“苦”本身并没有价值。 “良药苦口利于病”，真正利于病的是药物的有效成分，而不是苦感——把药装到胶囊里再吃并不会降低疗效。因此如果现在有个方法能在不降低练习效果的情况下让练习充满趣味性，我们应该使用那个方法。我们看到有很多人的确能历经苦难而保持乐观积极的精神，但那不是苦难的作用。他们不是因为苦难而成长，是尽管有苦难，仍然成长了。没有苦难他们可能成就更大。人生本来短暂，为什么还要栽培苦涩？</p>
+<h2 id="早教的价值"><a href="#早教的价值" class="headerlink" title="早教的价值"></a>早教的价值</h2><p>&emsp;&emsp;9个月以下的孩子不需要额外的音频和视频多媒体信息。长时间让孩子听音乐看电视会导致孩子长大以后不能集中注意力。18个月以下的孩子只有听真人说话、在有互动的情况下，才能提高词汇量。其他方法一律没用而且有害。2岁以下的儿童只适合接触三维的物体——也就是真实世界里那些寻常的物体，比如玩具和人。而二维的东西，比如书本和图画，只会妨碍他们感知能力的发育。人的听觉、视觉、各种感知能力、大脑的发育是讲顺序的。提前给一个不该给的刺激，很可能让这时候该发育的东西发育不好。所以，6岁以下儿童的任务不是用惊艳的学习成绩给父母增光，而是健康地发育成长。强迫式的早教是残害儿童。</p>
+<h2 id="迷信怕成本"><a href="#迷信怕成本" class="headerlink" title="迷信怕成本"></a>迷信怕成本</h2><p>&emsp;&emsp;现在这个社会还有不少人迷信网上的谣言，它们觉得宁可信其有，不可信其无，任凭旁人如何劝阻，也不为所动。有人鼓吹鱼翅好，包治百病，于是人们一窝蜂去买鱼翅。任凭我们怎么劝阻，告诉他们残害鲨鱼破坏环境，或者说鱼翅又贵又没有营养价值，他们不会听。究其根本，我们说的这些理由不痛不痒，没有指出他们到底需要为吃鱼翅这种行为付出多少的直接成本。下面是一种更为有效的劝阻方式：由于鲨鱼是顶级掠食者，所以鱼翅里集中了大量有毒有害物质，吃鱼翅就相当于在吃毒药。</p>
  
       <!-- reward -->
       
@@ -246,12 +226,12 @@
     <a class="modal-close" href="javascript:;"><i class="ri-close-circle-line"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://hardmountaingod.github.io/2024/03/31/steal_your_voice/" alt="微信分享二维码">
+      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://hardmountaingod.github.io/2024/10/03/%E5%BA%95%E5%B1%82%E9%80%BB%E8%BE%91-part2/" alt="微信分享二维码">
     </div>
 </div>
 
 <div id="share-mask"></div>  
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/GPT-SoVITS/" rel="tag">GPT_SoVITS</a></li></ul>
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E6%80%9D%E7%BB%B4/" rel="tag">思维</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E9%80%BB%E8%BE%91/" rel="tag">逻辑</a></li></ul>
 
     </footer>
   </div>
@@ -259,15 +239,20 @@
    
   <nav class="article-nav">
     
-      <a href="/2024/10/01/%E5%A5%BD%E5%A5%BD%E4%BC%91%E6%81%AF-%E7%9D%A1%E8%A7%89/" class="article-nav-link">
+      <a href="/2024/10/03/%E5%BA%95%E5%B1%82%E9%80%BB%E8%BE%91-part3/" class="article-nav-link">
         <strong class="article-nav-caption">上一篇</strong>
         <div class="article-nav-title">
           
-            好好睡觉
+            底层逻辑-part3
           
         </div>
       </a>
     
+    
+      <a href="/2024/10/03/%E5%BA%95%E5%B1%82%E9%80%BB%E8%BE%91-part1/" class="article-nav-link">
+        <strong class="article-nav-caption">下一篇</strong>
+        <div class="article-nav-title">底层逻辑-part1</div>
+      </a>
     
   </nav>
 
